@@ -44,6 +44,6 @@ namespace projection {
 
     //% block="degrees to radians: $deg"
     export function deg2rad(deg: number): number {
-        return deg * (pi/180);
+        return deg * (pi()/180);
     }
 }
