@@ -36,4 +36,14 @@ namespace projection {
         line_3d(surface, x + width, y + height, z, x, y + height, z, c);
         line_3d(surface, x, y + height, z, x, y, z, c);
     }
+
+    //% block="PI"
+    export function pi(): number {
+        return 3.14159265;
+    }
+
+    //% block="degrees to radians: $deg"
+    export function deg2rad(deg: number): number {
+        return deg * (pi/180);
+    }
 }
