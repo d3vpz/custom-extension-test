@@ -55,6 +55,8 @@ namespace projection {
 
     //% block="create arrays"
     export function createArrays() {
-        
+        for (i=1; i<360; i++) {
+            
+        }
     }
 }
