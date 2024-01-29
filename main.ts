@@ -22,7 +22,7 @@ namespace projection {
 
     //% block="add vertex at $x $y $z"
     export function addVertex(x: number, y: number, z: number) {
-        vertices.push([x,y,z]);
+        vertices.push([x, y, z]);
     }
     
     //% block="draw $c 3D line on $surface at $x1 $y1 $z1 $x2 $y2 $z2"
