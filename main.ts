@@ -1,7 +1,7 @@
 //% color="#538a74"
 namespace projection {
     let focal_len: number;
-    let vertices = [];
+    let vertices: number = [];
 
     //% block
     export function setFocalLength(focal_length: number) {
@@ -18,6 +18,10 @@ namespace projection {
     export function screenCoordinateY(y: number, z: number): number {
         let screen_y = ((y+60) / z) * focal_len;
         return screen_y;
+    }
+
+    export function addVertice(x: number, y: number, z: number) {
+        vertices.push([x,y,z]);
     }
     
     //% block="draw $c 3D line on $surface at $x1 $y1 $z1 $x2 $y2 $z2"
