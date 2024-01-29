@@ -52,11 +52,4 @@ namespace projection {
     export function rad2deg(rad: number): number {
         return rad * (180/pi());
     }
-
-    //% block="create arrays"
-    export function createArrays() {
-        for (i=1; i<360; i++) {
-            
-        }
-    }
 }
