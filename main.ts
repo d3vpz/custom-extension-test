@@ -1,6 +1,7 @@
 //% color="#538a74"
 namespace projection {
     let focal_len: number;
+    let vertices = [];
 
     //% block
     export function setFocalLength(focal_length: number) {
@@ -52,4 +53,7 @@ namespace projection {
     export function rad2deg(rad: number): number {
         return rad * (180/pi());
     }
+
+    //% block="rotate points by "$angle" on the x-axis
+    export function rotateX(angle: number): 
 }
