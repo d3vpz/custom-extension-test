@@ -3,6 +3,12 @@ namespace projection {
     let focal_len: number;
     let vertices: number = [];
 
+    let camera: Object = {
+        x: 0,
+        y: 0,
+        z: 0,
+    };
+
     //% block="set focal length to $focal_length"
     export function setFocalLength(focal_length: number) {
         focal_len = focal_length;
@@ -59,7 +65,15 @@ namespace projection {
         return rad * (180/pi());
     }
 
+    //% block="perspective projection $x $y $z"
+    export function perspective(x: number, y: number, z: number): Array {
+        let screen_x = x / z * focal_len;
+        let screen_y = y / z * focal_len;
+        return [screen_x, screen_y];
+    }
+
     //% block="project vertices on screen"
     export function project_vertices() {
+        
     }
 }
