@@ -14,18 +14,6 @@ namespace projection {
         focal_len = focal_length;
     }
 
-    //% block
-    export function screenCoordinateX(x: number, z: number): number {
-        let screen_x = ((x+80) / z) * focal_len;
-        return screen_x;
-    }
-
-    //% block
-    export function screenCoordinateY(y: number, z: number): number {
-        let screen_y = ((y+60) / z) * focal_len;
-        return screen_y;
-    }
-
     //% block="add vertex at $x $y $z"
     export function addVertex(x: number, y: number, z: number) {
         vertices.push([x, y, z]);
