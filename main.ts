@@ -63,6 +63,7 @@ namespace projection {
         for (let v=0; v<vertices.length; v++) {
             let vertex = vertices[v];
             let screen_coords = perspective(vertex[0], vertex[1], vertex[2]);
+            console.log(screen_coords);
         }
     }
 }
