@@ -59,6 +59,7 @@ namespace projection {
         return rad * (180/pi());
     }
 
-    //% block="rotate points by "$angle" on the x-axis
-    export function rotateX(angle: number): 
+    //% block="project vertices on screen"
+    export function project_vertices() {
+    }
 }
