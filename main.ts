@@ -59,8 +59,6 @@ namespace projection {
 
     //% block="project vertices on screen"
     export function project_vertices() {
-        for (let i = 0; i < vertices.length; i++) {
-            console.log(vertices[i]);
-        }
+        console.log(vertices);
     }
 }
