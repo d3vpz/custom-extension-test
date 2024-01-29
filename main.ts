@@ -20,8 +20,8 @@ namespace projection {
         return screen_y;
     }
 
-    //% block="add vertice at $x $y $z"
-    export function addVertice(x: number, y: number, z: number) {
+    //% block="add vertex at $x $y $z"
+    export function addVertex(x: number, y: number, z: number) {
         vertices.push([x,y,z]);
     }
     
