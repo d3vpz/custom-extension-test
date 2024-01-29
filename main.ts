@@ -22,10 +22,6 @@ namespace projection {
     //% block="draw $c 3D line on $surface at $x1 $y1 $z1 $x2 $y2 $z2"
     //% surface.shadow="speedPicker"
     export function line_3d(surface: Image, x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, c: number) {
-        let sx1 = screenCoordinateX(x1, z1);
-        let sy1 = screenCoordinateY(y1, z1);
-        let sx2 = screenCoordinateX(x2, z2);
-        let sy2 = screenCoordinateY(y2, z2);
         surface.drawLine(sx1, sy1, sx2, sy2, c);
     }
 
