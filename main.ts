@@ -2,6 +2,7 @@
 namespace projection {
     let focal_len: number;
     let vertices: Array<any> = [];
+    let screen_points: Array<any> = [];
 
     let camera: Object = {
         x: 0,
@@ -60,7 +61,8 @@ namespace projection {
     //% block="project vertices on screen"
     export function project_vertices() {
         for (let v=0; v<vertices.length; v++) {
-            console.log(vertices[v]);
+            let vertex = vertices[v];
+            let screen_coords = perspective(vertex[0], vertex[1], vertex[2]);
         }
     }
 }
