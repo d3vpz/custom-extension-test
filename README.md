@@ -12,7 +12,7 @@ This repository can be added as an **extension** in MakeCode.
 * click on **Extensions** under the gearwheel menu
 * search for **https://github.com/d3vpz/custom-extension-test** and import
 
-## Edit this project ![Build status badge](https://github.com/d3vpz/custom-extension-test/workflows/MakeCode/badge.svg)
+## Edit this project
 
 To edit this repository in MakeCode.
 
