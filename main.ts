@@ -3,7 +3,7 @@ namespace projection {
     let focal_len: number;
     let vertices: number = [];
 
-    //% block
+    //% block="set focal length to $focal_length"
     export function setFocalLength(focal_length: number) {
         focal_len = focal_length;
     }
