@@ -1,3 +1,4 @@
+//% color="#42f5ad"
 namespace projection {
     let focal_len: number;
 
