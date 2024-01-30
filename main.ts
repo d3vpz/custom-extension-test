@@ -56,10 +56,13 @@ namespace projection {
     }
 
     //% block="perspective projection $x $y $z"
-    export function perspective(x: number, y: number, z: number): Array<any> {
+    export function perspective(x: number, y: number, z: number): Object {
         let screen_x = x / z * focal_len;
         let screen_y = y / z * focal_len;
-        return [screen_x, screen_y];
+        return {
+            x: screen_x,
+            y: screen_y,
+        };
     }
 
     //% block="project vertices on screen"
