@@ -69,6 +69,7 @@ namespace projection {
     export function project_vertices() {
         for (let v=0; v<vertices.length; v++) {
             let vertex = vertices[v];
+            console.log(vertex);
             let screen_coords = perspective(vertex.x, vertex.y, vertex.z);
             console.log(screen_coords);
         }
