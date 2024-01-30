@@ -17,7 +17,11 @@ namespace projection {
 
     //% block="add vertex at $x $y $z"
     export function addVertex(x: number, y: number, z: number) {
-        vertices.push([x, y, z]);
+        vertices.push({
+            x: x,
+            y: y,
+            z: z,
+        });
     }
 
     //% block="draw $c 3D line at $x1 $y1 $z1 $x2 $y2 $z2"
@@ -62,7 +66,7 @@ namespace projection {
     export function project_vertices() {
         for (let v=0; v<vertices.length; v++) {
             let vertex = vertices[v];
-            let screen_coords = perspective(vertex[0], vertex[1], vertex[2]);
+            let screen_coords = perspective(vertex.x, vertex.y, vertex.z);
             console.log(screen_coords);
         }
     }
