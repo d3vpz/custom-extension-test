@@ -31,6 +31,7 @@ namespace projection {
         let y1 = screen_points[p1].y;
         let x2 = screen_points[p2].x;
         let y2 = screen_points[p2].y;
+        surface.drawLine(x1, y1, x2, y2, c);
     }
 
     //% block="draw $c plane on $surface at $x $y $z with $width $height"
