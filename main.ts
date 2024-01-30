@@ -24,11 +24,14 @@ namespace projection {
         });
     }
 
-    //% block="draw $c 3D line at $x1 $y1 $z1 $x2 $y2 $z2"
+    //% block="draw $c 3D line on $surface from $p1 to $p2"
     //% surface.shadow="speedPicker"
-    export function line_3d(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, c: number) {
-        addVertex(x1, y1, z1);
-        addVertex(x2, y2, z2);
+    export function line_3d(surface: Image, p1: number, p2: number, c: number) {
+        let x1 = screen_points[p1].x;
+        let y1 = screen_points[p1].y;
+        let x2 = screen_points[p2].x;
+        let y2 = screen_points[p2].y;
+        surface.drawLine()
     }
 
     //% block="draw $c plane on $surface at $x $y $z with $width $height"
@@ -69,9 +72,9 @@ namespace projection {
     export function project_vertices() {
         for (let v=0; v<vertices.length; v++) {
             let vertex = vertices[v];
-            console.log(vertex);
             let screen_coords = perspective(vertex.x, vertex.y, vertex.z);
-            console.log(screen_coords);
+            screen_points.push(screen_coords);
+            console.log(screen_points);
         }
     }
 }
