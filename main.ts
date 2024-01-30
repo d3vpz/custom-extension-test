@@ -88,6 +88,7 @@ namespace projection {
     export function project_vertices() {
         for (let v=0; v<vertices.length; v++) {
             let vertex = vertices[v];
+            let vertex = translate_vertex(vertex.x, vertex.y, vertex.z, -camera.x, -camera.y, -camera.z);
             let screen_coords = perspective(vertex.x, vertex.y, vertex.z);
             screen_points.push(screen_coords);
         }
