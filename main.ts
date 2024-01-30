@@ -72,6 +72,18 @@ namespace projection {
         };
     }
 
+    //% block="translate point $x $y $z by $tx $ty $tz"
+    export function translate_vertex(x: number, y: number, z: number, tx: number, ty: number, tz: number): Object {
+        let nx = x + tx;
+        let ny = y + ty;
+        let nz = z + z;
+        return {
+            x: nx,
+            y: ny,
+            z: nz,
+        };
+    }
+
     //% block="project vertices on screen"
     export function project_vertices() {
         for (let v=0; v<vertices.length; v++) {
