@@ -90,7 +90,6 @@ namespace projection {
             let vertex = vertices[v];
             let vertex = translate_vertex(vertex.x, vertex.y, vertex.z, -camera.x, -camera.y, -camera.z);
             let screen_coords = perspective(vertex.x, vertex.y, vertex.z);
-            screen_points.push(screen_coords);
         }
     }
 }
