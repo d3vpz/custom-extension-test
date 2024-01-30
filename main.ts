@@ -4,7 +4,7 @@ namespace projection {
     let vertices: Array<any> = [];
     let screen_points: Array<any> = [];
 
-    let camera: Object = {
+    let camera = {
         x: 0,
         y: 0,
         z: 0,
@@ -86,9 +86,9 @@ namespace projection {
 
     //% block="project vertices on screen"
     export function project_vertices() {
-        for (let v=0; v<vertices.length; v++) {
+        for (let v = 0; v < vertices.length; v++) {
             let vertex = vertices[v];
-            vertex = translate_vertex(vertex.x, vertex.y, vertex.z, -camera.x, -camera.y, -camera.z);
+            vertex = translate_vertex(vertex.x, vertex.y, vertex.z, -(camera['x']), -(camera['y']), -(camera['z']));
             let screen_coords = perspective(vertex.x, vertex.y, vertex.z);
         }
     }
