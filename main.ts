@@ -34,20 +34,17 @@ namespace projection {
         surface.drawLine(x1, y1, x2, y2, c);
     }
 
-    //% block="draw $c 3D line on $surface from $x1 $y1 $z1 to $x2 $y2 $z2"
-    //% surface.shadow="speedPicker"
-    export function alt_line_3d(surface: Image, x1: number, y1: number, z2: number, x2: number, y2: number, z2: number, c: number) {
-        let sx1 = x1 / z1 * focal_len;
-        let sy1 = y1 / z1 * focal_len;
-        let sx2 = x2 / z2 * focal_len;
-        let sy2 = y2 / z2 * focal_len;
-        surface.drawLine(sx1, sy1, sx2, sy2, c);
-    }
-
     //% block="draw $c plane on $surface from $p1 to $p2"
     //% surface.shadow="speedPicker"
     export function plane(surface: Image, p1: number, p2: number, c: number) {
-        line_3d(surface,)
+        let left = screen_points[p1].x;
+        let right = screen_points[p2].x;
+        let top = screen_points[p1].y;
+        let bottom = screen_points[p2].y;
+        surface.drawLine(left, top, right, top, c);
+        surface.drawLine(right, top, right, bottom, c);
+        surface.drawLine(right, bottom, left, bottom, c);
+        surface.drawLine(left, bottom, left, top, c);
     }
 
     //% block="PI"
