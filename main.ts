@@ -36,10 +36,10 @@ namespace projection {
     //% block="draw $c plane on $surface at $x $y $z with $width $height"
     //% surface.shadow="speedPicker"
     export function plane(surface: Image, x: number, y: number, z: number, width: number, height: number, c: number) {
-        line_3d(x, y, z, x + width, y, z, c);
-        line_3d(x + width, y, z, x + width, y + height, z, c);
-        line_3d(x + width, y + height, z, x, y + height, z, c);
-        line_3d(x, y + height, z, x, y, z, c);
+        line_3d(surface, x, y, z, x + width, y, z, c);
+        line_3d(surface, x + width, y, z, x + width, y + height, z, c);
+        line_3d(surface, x + width, y + height, z, x, y + height, z, c);
+        line_3d(surface, x, y + height, z, x, y, z, c);
     }
 
     //% block="PI"
